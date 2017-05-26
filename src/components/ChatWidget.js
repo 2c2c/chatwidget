@@ -1,5 +1,6 @@
 import React from "react";
-var tmi = require("tmi.js");
+import tmi from "tmi.js";
+import { formatBadges, formatEmotes } from "./emotes";
 
 export default class ChatWidget extends React.Component {
   state = {
@@ -62,12 +63,21 @@ export default class ChatWidget extends React.Component {
       <div id="log" className="messages">
         {this.state.messages.map((m, i) => (
           <div key={this.state.messages.length - i} className="chat-message">
+            <span
+              dangerouslySetInnerHTML={{
+                __html: formatBadges(m.userstate.badges)
+              }}
+            />
             <span style={{ fontWeight: "bold", color: m.userstate.color }}>
               {" "}{m.userstate["display-name"]}{" "}
             </span>
             :
             {" "}
-            {m.message}
+            <span
+              dangerouslySetInnerHTML={{
+                __html: formatEmotes(m.message, m.userstate.emotes)
+              }}
+            />
             {" "}
           </div>
         ))}

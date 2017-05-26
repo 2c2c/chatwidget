@@ -3,6 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 
 import ChatWidget from "./components/ChatWidget.js";
+import Login from "./components/Login.js";
 
 class App extends Component {
   render() {
