@@ -39,7 +39,7 @@ export function formatEmotes(text, emotes) {
     var e = emotes[i];
     for (var j in e) {
       var mote = e[j];
-      if (typeof mote == "string") {
+      if (typeof mote === "string") {
         mote = mote.split("-");
         mote = [parseInt(mote[0]), parseInt(mote[1])];
         var length = mote[1] - mote[0],
