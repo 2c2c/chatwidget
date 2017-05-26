@@ -1,0 +1,70 @@
+html, body, #root {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  min-height: 100%;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.App {
+  text-align: center;
+  background-color: #000;
+  height: 100%;
+  width: 100%;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+
+.App-header {
+  background-color: #222;
+  height: 150px;
+  padding: 20px;
+  color: white;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+.messages {
+  display: "flex";
+  width: "100%";
+  height: "100%";
+  min-height: "100%";
+  text-align: "left";
+  flex-direction: column-reverse;
+}
+
+.chat-message {
+  color: #fff;
+  animation: fadeInRight .3s ease forwards, fadeOut 0.5s ease 15000ms forwards;
+  -webkit-animation: fadeInRight .3s ease forwards, fadeOut 0.5s ease 15000ms forwards;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes fadeRight {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(100%,0,0);
+    transform: translate3d(100%,0,0);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+@keyframes fadeOut {
+  from { opacity: 1 }
+  to { opacity: 0 }
+}
