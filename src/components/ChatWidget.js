@@ -60,9 +60,9 @@ export default class ChatWidget extends React.Component {
   render() {
     return (
       <div className="messages">
-        {this.state.messages.map(m => (
-          <div className="chat-message">
-            {m.userstate["display-name"]}: {m.message}{" "}
+        {this.state.messages.map((m,i) => (
+          <div key={i} className="chat-message">
+            <span style={{fontWeight: "bold", color: m.userstate.color}}> {m.userstate["display-name"]} </span>: {m.message}{" "}
           </div>
         ))}
       </div>
