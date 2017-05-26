@@ -40,6 +40,11 @@ export default class ChatWidget extends React.Component {
               return;
             }
 
+            // probably dont want to show whispers publically
+            if (userstate["message-type"] === "whisper") {
+              return;
+            }
+
             console.log({ channel, userstate, message });
             console.log(userstate);
 
