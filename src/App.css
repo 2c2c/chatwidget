@@ -17,12 +17,12 @@ html, body, #root {
 }
 
 .messages {
-  position: relative;
-  display: "flex";
-  height: "100%";
-  width: "100%";
-  min-height: "100%";
-  text-align: "left";
+  position: absolute;
+  display: flex;
+  height: 100%;
+  width: 100%;
+  min-height: 100%;
+  text-align: left;
   flex-direction: column-reverse;
 }
 
