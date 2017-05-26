@@ -26,7 +26,7 @@ html, body, #root {
   flex-direction: column-reverse;
 }
 
-.chat-message {
+#log>div {
   color: #fff;
   flex: "1 1 auto";
   animation: fadeRight .3s ease forwards, fadeOut 0.5s ease 15000ms forwards;
