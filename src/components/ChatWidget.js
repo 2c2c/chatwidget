@@ -64,6 +64,7 @@ export default class ChatWidget extends React.Component {
   }
 
   render() {
+    // the `{" "}` are an artifact of using prettier on jsx. white space that has semantic value gets rewritten to be more explicit (at the expense of looking ugly)
     return (
       <div id="log" className="messages">
         {this.state.messages.map((m, i) => (
